@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="music-player">
+        <h1>Music Player</h1>
+        <div class="now-playing">
+            <img id="album-art" src="assets/album-cover.jpeg" alt="Album cover">
+            <div class="song-info">
+                <h2 id="song-title">Hold On, We're Going Home (feat. Majid Jordan)</h2>
+                <p id="song-artist">Drake</p>
+                <p id="song-album">Nothing Was The Same</p>
+            </div>
+        </div>
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="seek-slider" min="0" max="100" value="0" step="1">
+            <span id="duration">0:00</span>
+        </div>
+        <div class="controls">
+            <button id="prev-btn" aria-label="Previous song">⏮</button>
+            <button id="play-pause-btn" aria-label="Play or pause">▶</button>
+            <button id="next-btn" aria-label="Next song">⏭</button>
+        </div>
+        <div class="volume-container">
+            <label for="volume-slider">Volume:</label>
+            <input type="range" id="volume-slider" min="0" max="100" value="100" step="1">
+        </div>
+        <div class="playlist">
+            <h3>Playlist</h3>
+            <ul id="playlist-items"></ul>
+        </div>
+    </div>
+    <audio id="audio-player">
+        <source src="assets/HOWGH.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
