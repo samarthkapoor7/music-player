@@ -17,7 +17,11 @@ class MusicPlayer {
         this.playlist = [
             { title: "Hold On, We're Going Home", artist: "Drake", album: "Nothing Was The Same", src: "assets/HOWGH.mp3", cover: "assets/album-cover.jpeg" },
             { title: "GLOCK", artist: "Don Toliver", album: "Hardstone Psycho", src: "assets/GLOCK.mp3", cover: "assets/album-cover-2.jpeg" },
-            { title: "I Feel It Coming ft. Daft Punk", artist: "The Weeknd", album: "Starboy", src: "assets/IFIC.mp3", cover: "assets/album-cover-3.jpeg" }
+            { title: "I Feel It Coming ft. Daft Punk", artist: "The Weeknd", album: "Starboy", src: "assets/IFIC.mp3", cover: "assets/album-cover-3.jpeg" },
+            { title: "Afterthought", artist: "Joji & BENEE", album: "Nectar", src: "assets/Afterthought.mp3", cover: "assets/album-cover-4.jpeg" },
+            { title: "SRK", artist: "Seedhe Maut", album: "SRK / Namuna", src: "assets/SRK.mp3", cover: "assets/album-cover-5.jpeg" },
+            { title: "hey now", artist: "Kendrick Lamar", album: "GNX", src: "assets/hey-now.mp3", cover: "assets/album-cover-6.jpeg" },
+            { title: "Self Care", artist: "Mac Miller", album: "Swimming", src: "assets/Self-Care.mp3", cover: "assets/album-cover-7.jpeg" }
         ];
 
         this.initPlayer();
