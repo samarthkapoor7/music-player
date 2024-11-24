@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1A1A1D;
+    overflow: hidden;
+}
+
+.music-player {
+    background-color: #3B1C32;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #E8BCB9;
+}
+
+h3 {
+    color: #E8BCB9;
+}
+
+.current-time {
+    color: #E8BCB9;
+}
+
+.now-playing {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#album-art {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.song-info {
+    flex-grow: 1;
+}
+
+.song-info h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #E8BCB9;
+}
+
+.song-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #E8BCB9;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#seek-slider {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #A64D79;
+    border: none;
+    color: white;
+    width: 50px; /* Set equal width and height for circular shape */
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 50%; /* Make buttons circular */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align text or icons */
+}
+
+button:hover {
+    background-color: #922C5D; /* Slightly darker color on hover */
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#volume-slider {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.playlist {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#playlist-items {
+    list-style-type: none;
+    padding: 0;
+    padding-right: 5px;
+}
+
+#playlist-items li {
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#playlist-items li:hover {
+    background-color: #e9e9e9;
+}
+
+#playlist-items li.active {
+    background-color: #A64D79;
+    color: white;
+}
+
+@media (max-width: 480px) {
+    .music-player {
+        padding: 10px;
+    }
+
+    .now-playing {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #album-art {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .controls {
+        flex-wrap: wrap;
+    }
+
+    button {
+        margin-bottom: 5px;
+    }
+}

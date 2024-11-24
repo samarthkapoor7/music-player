@@ -15,7 +15,7 @@ class MusicPlayer {
         this.isPlaying = false;
 
         this.playlist = [
-            { title: "Hold On, We're Going Home (feat. Majid Jordan)", artist: "Drake", album: "Nothing Was The Same", src: "assets/HOWGH.mp3", cover: "assets/album-cover.jpeg" },
+            { title: "Hold On, We're Going Home", artist: "Drake", album: "Nothing Was The Same", src: "assets/HOWGH.mp3", cover: "assets/album-cover.jpeg" },
             { title: "GLOCK", artist: "Don Toliver", album: "Hardstone Psycho", src: "assets/GLOCK.mp3", cover: "assets/album-cover-2.jpeg" },
             { title: "I Feel It Coming ft. Daft Punk", artist: "The Weeknd", album: "Starboy", src: "assets/IFIC.mp3", cover: "assets/album-cover-3.jpeg" }
         ];
