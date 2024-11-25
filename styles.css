@@ -1,71 +1,47 @@
 body {
-    font-family: Rubik;
+    font-family: Rubik, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    min-height: 100vh;
     margin: 0;
     background-color: #1A1A1D;
     overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .music-player {
     background-color: #3B1C32;
-    padding: 10px 20px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
     width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     color: #E8BCB9;
-}
-
-h3 {
-    color: #E8BCB9;
-}
-
-.current-time {
-    color: #E8BCB9;
+    margin-bottom: 20px;
 }
 
 .now-playing {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #album-art {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px;
-    margin-right: 15px;
-}
-
-footer {
-    opacity: 0.7;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    color: white;
-}
-
-footer hr {
-    border: 0;
-    height: 1px; 
-    background-color: white; 
-    opacity: 0.5; 
-    margin: 10px 0; 
-}
-
-
-.song-info {
-    flex-grow: 1;
+    margin-bottom: 15px;
 }
 
 .song-info h2 {
@@ -78,41 +54,34 @@ footer hr {
     margin: 5px 0;
     font-size: 0.9em;
     color: #E8BCB9;
+    opacity: 0.8;
 }
 
 .progress-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    color: #ffffff;
+    color: #E8BCB9;
 }
-
 
 #seek-slider {
     flex-grow: 1;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 10px;
     -webkit-appearance: none;
     appearance: none;
-    height: 5px;
-    background: #dfdbde;
-    border-radius: 5px; 
-    transition: all 0.3s ease;
-}
-
-#seek-slider:hover {
-    background: #E8BCB9; 
+    height: 4px;
+    background: #E8BCB9;
+    border-radius: 2px;
 }
 
 #seek-slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default thumb style */
+    -webkit-appearance: none;
     appearance: none;
-    width: 15px;
-    height: 15px;
-    background: #fff; /* Thumb color */
+    width: 12px;
+    height: 12px;
+    background: #E8BCB9;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for thumb hover effect */
 }
 
 .controls {
@@ -125,15 +94,15 @@ button {
     background-color: #A64D79;
     border: none;
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 16px;
     cursor: pointer;
-    margin: 0 5px;
-    border-radius: 50%; 
+    margin: 0 10px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 button:hover {
@@ -144,7 +113,7 @@ button:hover {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    color: white;
+    color: #E8BCB9;
 }
 
 #volume-slider {
@@ -153,95 +122,107 @@ button:hover {
     -webkit-appearance: none;
     appearance: none;
     height: 4px;
-    background: #1d1019;
-    border-radius: 5px; /* Rounded corners */
-    transition: all 0.3s ease;
-}
-
-#volume-slider:hover {
-    background: #e9e9e9; /* Change color on hover */
+    background: #E8BCB9;
+    border-radius: 2px;
 }
 
 #volume-slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove default thumb style */
+    -webkit-appearance: none;
     appearance: none;
-    width: 10px;
-    height: 10px;
-    background: #fff; /* Thumb color */
+    width: 12px;
+    height: 12px;
+    background: #E8BCB9;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition for thumb hover effect */
 }
 
 .playlist {
-    max-height: 200px;
-    overflow-y: scroll;
+    margin-top: 20px;
 }
 
-::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-    background: transparent;
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #1d1019;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(#922C5D,#A64D79);
-    border-radius: 10px;
-    transition: opacity 0.3s;
+h3 {
+    color: #E8BCB9;
+    margin-bottom: 10px;
 }
 
 #playlist-items {
     list-style-type: none;
     padding: 0;
-    padding-right: 10px;
+    margin: 0;
 }
 
 #playlist-items li {
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #A64D79;
     margin-bottom: 5px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 5px;
+    color: #E8BCB9;
+}
+
+#playlist-items li:not(:first-child) {
+    background-color: #E8BCB9;
+    color: #3B1C32;
 }
 
 #playlist-items li:hover {
-    background-color: #e9e9e9;
+    opacity: 0.8;
 }
 
-#playlist-items li.active {
-    background-color: #A64D79;
+footer {
+    opacity: 0.7;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     color: white;
+}
+footer hr {
+    border: 0;
+    height: 1px; 
+    background-color: white; 
+    opacity: 0.5; 
+    margin: 10px 0; 
 }
 
 @media (max-width: 480px) {
     .music-player {
-        max-width: 200px;
-        padding: 5px 10px;
-        max-height: 300px;
-        margin-bottom: 150px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .music-player {
-        max-width: 350px;
-        padding: 10px 15px; 
-        max-height: 400px;
+        padding: 15px;
+        max-width: 300px;
     }
 
-    .now-playing {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 15px;
+    h1 {
+        font-size: 1.5em;
     }
 
     #album-art {
-        margin-right: 0;
+        width: 150px;
+        height: 150px;
+    }
+
+    .song-info h2 {
+        font-size: 1em;
+    }
+
+    .song-info p {
+        font-size: 0.8em;
+    }
+
+    .controls {
         margin-bottom: 15px;
     }
+
+    button {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    #playlist-items li {
+        padding: 8px;
+        font-size: 0.9em;
+    }
 }
+
